@@ -77,7 +77,7 @@ const NavItems = styled.div`
   display: flex;
 
   ${phone(css`
-    display: ${ props => props.visible ? 'block' : 'none'};
+    display: ${props => (props.visible ? 'block' : 'none')};
   `)}
 
   > * {

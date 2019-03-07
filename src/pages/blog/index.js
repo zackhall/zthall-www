@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, Link } from "gatsby"
+import { graphql, Link } from 'gatsby'
 
 import Layout from '../../components/Layout'
 
@@ -41,9 +41,7 @@ export default class BlogIndexPage extends React.Component {
             </div>
           </div>
         </section>
-        <div>
-          {Posts}
-        </div>
+        <div>{Posts}</div>
       </Layout>
     )
   }
