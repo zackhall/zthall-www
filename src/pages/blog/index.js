@@ -1,9 +1,20 @@
 import React from 'react'
+import { graphql, Link } from "gatsby"
 
 import Layout from '../../components/Layout'
 
 export default class BlogIndexPage extends React.Component {
   render() {
+    const edges = this.props.data.allMarkdownRemark.edges
+    console.log(edges)
+    const Posts = edges
+      .filter(edge => !!edge.node.frontmatter.date)
+      .map(edge => (
+        <Link to={edge.node.fields.slug}>
+          {edge.node.frontmatter.title} ({edge.node.frontmatter.date})
+        </Link>
+      ))
+
     return (
       <Layout>
         <section className="section">
@@ -30,7 +41,30 @@ export default class BlogIndexPage extends React.Component {
             </div>
           </div>
         </section>
+        <div>
+          {Posts}
+        </div>
       </Layout>
     )
   }
 }
+
+export const pageQuery = graphql`
+  query BlogIndexPage {
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          excerpt(pruneLength: 250)
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+          }
+        }
+      }
+    }
+  }
+`
