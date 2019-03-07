@@ -11,11 +11,7 @@ export const IndexPageTemplate = ({
   subheading,
   description,
   main,
-}) => (
-  <div>
-    {title}
-  </div>
-)
+}) => <div>{title}</div>
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
@@ -56,8 +52,8 @@ IndexPage.propTypes = {
 export default IndexPage
 
 export const pageQuery = graphql`
-query IndexPageTemplate {
-  markdownRemark(frontmatter: {templateKey: {eq: "index-page"}}) {
+  query IndexPageTemplate {
+    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
         image {
