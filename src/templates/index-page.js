@@ -8,25 +8,12 @@ import { mobile, phone } from '../utils/media'
 import headerImage from '../img/pages.svg'
 
 const HeaderContainer = styled.div`
-  position: relative;
-  display: flex;
-  ${phone(css`
-    flex-direction: column-reverse;
-  `)}
-  > * {
-    flex: 1 1 0;
-    margin: auto;
-  }
-  & img {
-    max-width: 100%;
+  text-align: center;
+  p {
+    line-height: 1.4;
+    font-size: 26px;
     ${phone(css`
-      max-height: 228px;
-    `)}
-  }
-  > *:nth-child(2) {
-    max-width: 50%;
-    ${phone(css`
-      max-width: 100%;
+      font-size: 20px;
     `)}
   }
 `
@@ -42,8 +29,9 @@ export const IndexPageTemplate = ({
   <HeaderContainer>
     <div>
       <h1>
-        {title}
+        {heading}
       </h1>
+      <p>{subheading}</p>
     </div>
     <div>
       <img src={headerImage} alt="" />

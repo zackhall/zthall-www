@@ -5,7 +5,7 @@ export default createGlobalStyle`
   :root {
     --color-primary: rgba(17, 70, 206, 1.00);
     --color-background: rgba(255, 255, 255, 1.00);
-    --color-neutral: rgba(51, 51, 51, 1.00);
+    --color-neutral: rgba(35, 35, 35, 1.00);
     --color-neutral-light: rgba(200, 200, 200, 1.00);
     --color-neutral-xlight: rgba(240, 240, 240, 1.00);
 
@@ -14,10 +14,6 @@ export default createGlobalStyle`
 
   * {
     box-sizing: border-box;
-  }
-
-  html {
-    overflow: hidden;
   }
 
   body {

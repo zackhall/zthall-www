@@ -1,10 +1,22 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
+import styled, { css } from 'styled-components'
 
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import GlobalStyle from '../components/GlobalStyle'
+import { mobile } from '../utils/media'
+
+const Container = styled.div`
+  max-width: 960px;
+  margin: 0 auto;
+  min-height: 80vh;
+  ${mobile(css`
+    width: 100%;
+    padding: 2rem;
+  `)}
+`
 
 const TemplateWrapper = ({ children }) => (
   <StaticQuery
@@ -61,7 +73,7 @@ const TemplateWrapper = ({ children }) => (
             <meta property="og:image" content="/img/og-image.jpg" />
           </Helmet>
           <Navigation />
-          <div>{children}</div>
+          <Container>{children}</Container>
           <Footer />
         </div>
       </>
