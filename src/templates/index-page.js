@@ -1,8 +1,35 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
+import styled, { css } from 'styled-components'
 
 import Layout from '../components/Layout'
+import { mobile, phone } from '../utils/media'
+import headerImage from '../img/pages.svg'
+
+const HeaderContainer = styled.div`
+  position: relative;
+  display: flex;
+  ${phone(css`
+    flex-direction: column-reverse;
+  `)}
+  > * {
+    flex: 1 1 0;
+    margin: auto;
+  }
+  & img {
+    max-width: 100%;
+    ${phone(css`
+      max-height: 228px;
+    `)}
+  }
+  > *:nth-child(2) {
+    max-width: 50%;
+    ${phone(css`
+      max-width: 100%;
+    `)}
+  }
+`
 
 export const IndexPageTemplate = ({
   image,
@@ -11,7 +38,18 @@ export const IndexPageTemplate = ({
   subheading,
   description,
   main,
-}) => <div>{title}</div>
+}) => (
+  <HeaderContainer>
+    <div>
+      <h1>
+        {title}
+      </h1>
+    </div>
+    <div>
+      <img src={headerImage} alt="" />
+    </div>
+  </HeaderContainer>
+)
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
