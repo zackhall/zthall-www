@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import dribbble from '../img/social/dribbble.svg'
 import instagram from '../img/social/instagram.svg'
 import twitter from '../img/social/twitter.svg'
-import vimeo from '../img/social/vimeo.svg'
+import github from '../img/social/github.svg'
 
 const FooterContainer = styled.footer`
   display: flex;
@@ -41,8 +41,8 @@ const Footer = class extends React.Component {
           <a title="instagram" href="https://instagram.com">
             <SocialIcon src={instagram} alt="Instagram" />
           </a>
-          <a title="vimeo" href="https://vimeo.com">
-            <SocialIcon src={vimeo} alt="Vimeo" />
+          <a title="github" href="https://vimeo.com">
+            <SocialIcon src={github} alt="Github" />
           </a>
         </div>
         <div>

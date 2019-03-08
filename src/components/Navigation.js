@@ -31,6 +31,10 @@ const LogoContainer = styled.div`
   `)}
 `
 
+const LogoImg = styled.img`
+  height: 2rem;
+`
+
 const MainNav = styled.div`
   display: flex;
 `
@@ -115,7 +119,7 @@ const Navigation = class extends React.Component {
           <MainNav>
             <LogoContainer>
               <Link to="/" title="Logo">
-                <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
+                <LogoImg src={logo} alt="Zack Hall" />
               </Link>
             </LogoContainer>
             <HamburgerMenu onClick={this.handleClick}>
