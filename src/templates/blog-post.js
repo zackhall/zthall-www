@@ -6,7 +6,7 @@ import { graphql, Link } from 'gatsby'
 import styled, { css } from 'styled-components'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
-import { LeadHeading, LeadParagraph } from '../components/Lead'
+import { LeadH1, LeadParagraph } from '../components/Lead'
 import { mobile } from '../utils/media'
 
 const Container = styled.div`
@@ -31,7 +31,7 @@ export const BlogPostTemplate = ({
     <section>
       {helmet || ''}
       <Container>
-        <LeadHeading>{title}</LeadHeading>
+        <LeadH1>{title}</LeadH1>
         <LeadParagraph>{description}</LeadParagraph>
         <PostContent content={content} />
         {tags && tags.length ? (

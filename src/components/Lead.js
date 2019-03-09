@@ -3,25 +3,30 @@ import styled, { css } from 'styled-components'
 
 import { mobile, phone } from '../utils/media'
 
-export const LeadHeading = styled.h1`
+const base = css`
   text-align: center;
-  // max-width: 75%;
-  margin: 3rem auto 1.5rem;
+  max-width: 750px;
   ${mobile(css`
     max-width: 100%;
   `)}
 `
 
+export const LeadH1 = styled.h1`
+  ${base}
+  margin: 3rem auto 1.5rem;
+`
+
+export const LeadH2 = styled.h2`
+  ${base}
+  margin: 1rem auto 2rem;
+`
+
 export const LeadParagraph = styled.p`
-  text-align: center;
+  ${base}
   line-height: 1.5;
   font-size: 26px;
   font-weight: 200;
-  // max-width: 75%;
   margin: 1rem auto 2rem;
-  ${mobile(css`
-    max-width: 100%;
-  `)}
   ${phone(css`
     font-size: 20px;
   `)}
