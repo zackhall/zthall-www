@@ -5,7 +5,7 @@ export default createGlobalStyle`
   :root {
     --color-primary: rgba(17, 70, 206, 1.00);
     --color-background: rgba(255, 255, 255, 1.00);
-    --color-neutral: rgba(25, 25, 25, 1.00);
+    --color-neutral: rgba(50, 50, 50, 1.00);
     --color-neutral-light: rgba(200, 200, 200, 1.00);
     --color-neutral-xlight: rgba(240, 240, 240, 1.00);
 
