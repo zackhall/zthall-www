@@ -85,7 +85,7 @@ const NavItems = styled.div`
   `)}
 
   > * {
-    padding: .75rem 1rem;
+    padding: .75rem 2rem;
     line-height: 1.5
     display: flex;
     align-items: flex-end;
@@ -93,7 +93,7 @@ const NavItems = styled.div`
     text-decoration: none;
     font-weight: 300;
     color: var(--color-neutral);
-
+    transition: color 0.25s ease;
     &:hover {
       color: var(--color-primary);
     }

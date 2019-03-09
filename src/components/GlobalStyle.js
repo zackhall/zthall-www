@@ -5,11 +5,11 @@ export default createGlobalStyle`
   :root {
     --color-primary: rgba(17, 70, 206, 1.00);
     --color-background: rgba(255, 255, 255, 1.00);
-    --color-neutral: rgba(35, 35, 35, 1.00);
+    --color-neutral: rgba(25, 25, 25, 1.00);
     --color-neutral-light: rgba(200, 200, 200, 1.00);
     --color-neutral-xlight: rgba(240, 240, 240, 1.00);
 
-    --font-family-primary: Helvetica, Arial, sans-serif;
+    --font-family-primary: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   }
 
   * {
@@ -20,6 +20,8 @@ export default createGlobalStyle`
     margin: 0;
     font-family: var(--font-family-primary);
     font-weight: 300;
+    letter-spacing: 0.01em;
+    line-height: 1.7
   }
 
 ::selection {
@@ -30,13 +32,13 @@ export default createGlobalStyle`
   h1, h2, h3, h4, h5, h6 {
     color: var(--color-neutral);
     font-family: var(--font-family-primary);
-    font-weight: 700;
-    letter-spacing: -0.025em;
+    font-weight: 800;
+    letter-spacing: -0.02em;
   }
 
   h1 {
     font-size: 72px;
-    line-height: 1;
+    line-height: 1.2;
     ${mobile(css`
       font-size: 56px;
     `)}
