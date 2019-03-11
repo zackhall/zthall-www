@@ -92,6 +92,7 @@ const NavItems = styled.div`
     justify-content: center;
     text-decoration: none;
     font-weight: 300;
+    font-size: 15px;
     color: var(--color-neutral);
     transition: color 0.25s ease;
     &:hover {
