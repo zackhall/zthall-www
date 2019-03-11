@@ -10,7 +10,7 @@ import { LeadH2, LeadParagraph } from '../components/Lead'
 import { Card, CardGallery } from '../components/Card'
 
 // Assets
-import headerImage from '../img/pages.svg'
+import headerImage from '../img/pages.png'
 import amazon from '../img/social/amazon.svg'
 import microsoft from '../img/social/microsoft.svg'
 import burpee from '../img/social/burpee.svg'
@@ -29,9 +29,11 @@ const HeaderContainer = styled.div`
       font-size: 20px;
     `)}
   }
-  img {
-    max-width: 100%;
-  }
+`
+
+const HeaderImage = styled.img`
+  margin: 3rem 0;
+  max-width: 100%;
 `
 
 const Icon = styled.img`
@@ -78,7 +80,7 @@ export const IndexPageTemplate = ({
         <p>{subheading}</p>
       </div>
       <div>
-        <img src={headerImage} alt="" />
+        <HeaderImage src={headerImage} alt="" />
       </div>
       <Centered>
         <Small>Trusted by</Small>
