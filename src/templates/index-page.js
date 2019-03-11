@@ -19,6 +19,7 @@ import postImage from '../img/JS.png'
 
 const HeaderContainer = styled.div`
   text-align: center;
+  margin-top: 5rem;
   p {
     line-height: 1.5;
     font-size: 26px;
@@ -32,7 +33,7 @@ const HeaderContainer = styled.div`
 `
 
 const HeaderImage = styled.img`
-  margin: 3rem 0;
+  margin: 5rem 0;
   max-width: 100%;
 `
 
@@ -173,6 +174,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
       limit: 4
+      filter: { frontmatter: {templateKey: {in: "blog-post"}}}
     ) {
       edges {
         node {
