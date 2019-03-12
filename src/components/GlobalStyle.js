@@ -1,5 +1,17 @@
-import { createGlobalStyle, css } from 'styled-components'
+import { createGlobalStyle, css, keyframes } from 'styled-components'
 import { mobile, phone } from '../utils/media'
+
+const backgroundKeyframes = keyframes`
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+`
 
 export default createGlobalStyle`
   :root {
@@ -67,6 +79,15 @@ export default createGlobalStyle`
     ${phone(css`
       font-size: 26px;
     `)}
+  }
+
+  em {
+    color: var(--color-background);
+    background: linear-gradient(-45deg, #342FD4, #2DB3C7, #2EC2A8);
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-size: 400% 400%;
+    animation: ${backgroundKeyframes} 15s ease infinite;
   }
 
   pre {

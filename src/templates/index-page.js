@@ -6,7 +6,7 @@ import styled, { css } from 'styled-components'
 // Components
 import Layout from '../components/Layout'
 import { mobile, phone } from '../utils/media'
-import { LeadH2, LeadParagraph } from '../components/Lead'
+import { LeadH1, LeadH2, LeadParagraph } from '../components/Lead'
 import { Card, CardGallery } from '../components/Card'
 
 // Assets
@@ -20,16 +20,6 @@ import postImage from '../img/JS.png'
 const HeaderContainer = styled.div`
   text-align: center;
   margin-top: 5rem;
-  p {
-    line-height: 1.5;
-    font-size: 26px;
-    font-weight: 200;
-    max-width: 750px;
-    margin: auto;
-    ${phone(css`
-      font-size: 20px;
-    `)}
-  }
 `
 
 const HeaderImage = styled.img`
@@ -37,9 +27,13 @@ const HeaderImage = styled.img`
   max-width: 100%;
 `
 
+const LightParagraph = styled.p`
+  opacity: 0.75;
+`
+
 const Icon = styled.img`
-  height: 2rem;
-  margin: 2rem;
+  height: 2.5rem;
+  margin: 4rem;
   opacity: 0.75;
 `
 
@@ -77,8 +71,13 @@ export const IndexPageTemplate = ({
   <>
     <HeaderContainer>
       <div>
-        <h1>{heading}</h1>
-        <p>{subheading}</p>
+        <LeadH1>
+          {heading.split('*').map((val, i) => {
+            return i % 2 === 0 ? <>{val}</> : <em>{val}</em>
+          })}
+        </LeadH1>
+        <LeadParagraph>{subheading}</LeadParagraph>
+        {/* <LightParagraph>{description}</LightParagraph> */}
       </div>
       <div>
         <HeaderImage src={headerImage} alt="" />
