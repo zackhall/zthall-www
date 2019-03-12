@@ -13,7 +13,7 @@ const Nav = styled.nav`
 const NavContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  min-height: 3.25rem;
+  min-height: 3.5rem;
   max-width: 960px;
   margin: 0 auto;
 
@@ -85,8 +85,8 @@ const NavItems = styled.div`
   `)}
 
   > * {
-    padding: .75rem 2rem;
-    line-height: 1.5
+    padding: 0.75rem 2rem;
+    line-height: 2.5;
     display: flex;
     align-items: flex-end;
     justify-content: center;

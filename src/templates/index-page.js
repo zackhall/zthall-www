@@ -59,7 +59,7 @@ const Small = styled.p`
 `
 
 const Section = styled.section`
-  margin: 5rem 0;
+  margin: 7rem 0;
   ${phone(css`
     margin: 1.5rem 0;
   `)}
@@ -84,7 +84,7 @@ export const IndexPageTemplate = ({
         <HeaderImage src={headerImage} alt="" />
       </div>
       <Centered>
-        <Small>Trusted by</Small>
+        <Small>My work can be found on</Small>
       </Centered>
       <Centered>
         <Icon src={amazon} />
@@ -96,8 +96,8 @@ export const IndexPageTemplate = ({
     <Section>
       <LeadH2>Writing</LeadH2>
       <LeadParagraph>
-        Build bridges, not walls. Sharing openly my explorations in designing
-        and coding user experiences.
+        Useful tips, insights, and knowledge from my experience in building user
+        experiences.
       </LeadParagraph>
       <CardGallery>
         {posts.map(post => (
@@ -174,7 +174,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
       limit: 4
-      filter: { frontmatter: {templateKey: {in: "blog-post"}}}
+      filter: { frontmatter: { templateKey: { in: "blog-post" } } }
     ) {
       edges {
         node {

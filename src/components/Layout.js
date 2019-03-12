@@ -8,6 +8,8 @@ import Footer from '../components/Footer'
 import GlobalStyle from '../components/GlobalStyle'
 import { mobile } from '../utils/media'
 
+import 'prismjs/themes/prism-tomorrow.css'
+
 const Container = styled.div`
   max-width: 960px;
   margin: 0 auto;

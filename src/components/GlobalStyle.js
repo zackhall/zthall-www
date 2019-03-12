@@ -3,9 +3,9 @@ import { mobile, phone } from '../utils/media'
 
 export default createGlobalStyle`
   :root {
-    --color-primary: rgba(17, 70, 206, 1.00);
+    --color-primary: rgba(11, 36, 251, 1.00);
     --color-background: rgba(255, 255, 255, 1.00);
-    --color-neutral: rgba(0, 0, 0, 1.00);
+    --color-neutral: rgba(35, 35, 35, 1.00);
     --color-neutral-light: rgba(200, 200, 200, 1.00);
     --color-neutral-xlight: rgba(240, 240, 240, 1.00);
 
@@ -24,10 +24,10 @@ export default createGlobalStyle`
     line-height: 1.7
   }
 
-::selection {
-  background: var(--color-primary);
-  color: var(--color-background);
-}
+  ::selection {
+    background: var(--color-primary);
+    color: var(--color-background);
+  }
 
   h1, h2, h3, h4, h5, h6 {
     color: var(--color-neutral);
@@ -67,6 +67,11 @@ export default createGlobalStyle`
     ${phone(css`
       font-size: 26px;
     `)}
+  }
+
+  pre {
+    border-radius: 5px;
+    margin: 2rem 0 !important;
   }
 
   label {

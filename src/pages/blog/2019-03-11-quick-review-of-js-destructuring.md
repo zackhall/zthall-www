@@ -8,7 +8,6 @@ description: >-
 tags:
   - JavaScript
   - ES2015
-  - ''
 ---
 ![JavaScript Destructuring](/img/destructuring.png)
 
@@ -18,7 +17,7 @@ JavaScript destructuring allows you to quickly unpack values from JavaScript pro
 
 In this first example, let's extract some simple properties from a JS object. Borrowing an example from my real-life, let's say we're building a wedding RSVP app. In the example below, we'll extract the id and RSVP status from the guest invitation.
 
-```
+```javascript
 var invite = {
   id: 1,
   name: {
@@ -34,7 +33,7 @@ var { id, rsvpStatus } = invite
 
 This is synonymous with the longer dot notation.
 
-```
+```javascript
 var id = invite.id
 var rsvpStatus = invite.rsvpStatus
 ```
@@ -43,7 +42,7 @@ var rsvpStatus = invite.rsvpStatus
 
 If we want to access nested objects, we can do that by simply matching the structure of the object.
 
-```
+```javascript
 var invite = {
   id: 1,
   name: {
@@ -62,7 +61,7 @@ If you'd like to give the newly declared variable a different name than that whi
 
 I often forget the order for renaming an object with destructuring. Do I place the property name before the new variable name? Or vice versa? To remember this, I think of it as a mini-function, with the original name as the input on the left of the colon and the desired name as the output on the right.
 
-```
+```javascript
 var invite = {
   id: 1,
   name: {
@@ -78,7 +77,7 @@ var { rsvpStatus: status } = invite
 
 You can do this for nested objects as well.
 
-```
+```javascript
 var invite = {
   id: 1,
   name: {
@@ -96,7 +95,7 @@ var { name: { givenName: firstName, surname: lastName } = invite
 
 Another helpful feature of destructuring is the ability to provide default values.  To provide a default value, simple provide the default after an equals sign.
 
-```
+```javascript
 var invite = {
   id: 1,
   name: {
@@ -113,7 +112,7 @@ var { rsvpStatus = 'pending', foodPreference = 'chicken' } = invite
 
 This is especially helpful when you have a function which accepts an object as a parameter.
 
-```
+```javascript
 function createRSVP({ name, rsvpStatus = 'pending' }) {
   ...
 }
@@ -124,7 +123,7 @@ function createRSVP({ name, rsvpStatus = 'pending' }) {
 
 Yep, you guessed it. You can of course provide a default and rename the property at the same time.
 
-```
+```javascript
 var invite = {
   id: 1,
   name: {
@@ -141,7 +140,7 @@ var { rsvpStatus: status = 'pending' } = invite
 
 Array destructuring allows you to unpack objects from an array based on their positioning. I find this to be less common. One particularly useful use case though is combining destructuring with the `split` function on a string. Take the following example where we might be gathering data from a CSV input source.
 
-```
+```javascript
 // Example CSV Data
 // ID,Name,Status
 var csv = [

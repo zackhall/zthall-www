@@ -1,9 +1,9 @@
 ---
 templateKey: 'index-page'
-title: 'Strategy-first frontend development'
+title: "I build tasty websites."
 image: /img/home-jumbotron.jpg
-heading: Strategy-first frontend development
-subheading: A tailored, strategically-driven website will always stand out. I create, design, and talk about crafting responsive, user-friendly, and standards compliant websites with the latest in technology.
+heading: "I build tasty websites."
+subheading: I'm Zack Hall. I'm a freelance front-end developer. I create, design, and talk about crafting pixel-perfect, snappy, and user-friendly websites.
 description: >-
   Kaldi is the ultimate spot for coffee lovers who want to learn about their
   java’s origin and support the farmers that grew it. We take coffee production,
