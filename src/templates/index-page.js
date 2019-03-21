@@ -10,7 +10,7 @@ import { LeadH1, LeadH2, LeadParagraph } from '../components/Lead'
 import { Card, CardGallery } from '../components/Card'
 
 // Assets
-import headerImage from '../img/pages.png'
+import headerImage from '../img/zack-hall-zthall.png'
 import amazon from '../img/social/amazon.svg'
 import microsoft from '../img/social/microsoft.svg'
 import burpee from '../img/social/burpee.svg'
