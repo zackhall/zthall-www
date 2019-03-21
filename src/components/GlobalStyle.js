@@ -16,6 +16,9 @@ const backgroundKeyframes = keyframes`
 export default createGlobalStyle`
   :root {
     --color-primary: rgba(11, 36, 251, 1.00);
+    --color-primary-light: rgba(11, 36, 251, 0.5);
+    --color-primary-xlight: rgba(11, 36, 251, 0.25);
+    --color-primary-xxlight: rgba(11, 36, 251, 0.15);
     --color-background: rgba(255, 255, 255, 1.00);
     --color-neutral: rgba(35, 35, 35, 1.00);
     --color-neutral-light: rgba(200, 200, 200, 1.00);

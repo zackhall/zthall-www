@@ -25,10 +25,11 @@
     "parcel-bundler": "^1.9.4",
     "prismjs": "^1.15.0",
     "prop-types": "^15.6.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.4.1",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
     "react-helmet": "^5.2.0",
     "styled-components": "^4.1.3",
+    "styled-transition-group": "^1.0.0",
     "uuid": "^3.2.1"
   },
   "keywords": [

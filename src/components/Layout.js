@@ -1,24 +1,13 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-import styled, { css } from 'styled-components'
 
+import Container from '../components/Container'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import GlobalStyle from '../components/GlobalStyle'
-import { mobile } from '../utils/media'
 
 import 'prismjs/themes/prism-tomorrow.css'
-
-const Container = styled.div`
-  max-width: 960px;
-  margin: 0 auto;
-  min-height: 80vh;
-  ${mobile(css`
-    width: 100%;
-    padding: 2rem;
-  `)}
-`
 
 const TemplateWrapper = ({ children }) => (
   <StaticQuery
