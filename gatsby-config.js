@@ -66,6 +66,14 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        typekit: {
+          id: 'iea1wxv',
+        },
+      },
+    },
+    {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`,

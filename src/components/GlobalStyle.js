@@ -24,7 +24,8 @@ export default createGlobalStyle`
     --color-neutral-light: rgba(200, 200, 200, 1.00);
     --color-neutral-xlight: rgba(240, 240, 240, 1.00);
 
-    --font-family-primary: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --font-family-primary: proxima-nova, -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --font-family-heading: warnock-pro, serif;
   }
 
   * {
@@ -46,7 +47,7 @@ export default createGlobalStyle`
 
   h1, h2, h3, h4, h5, h6 {
     color: var(--color-neutral);
-    font-family: var(--font-family-primary);
+    font-family: var(--font-family-heading);
     font-weight: 800;
     letter-spacing: -0.02em;
   }
