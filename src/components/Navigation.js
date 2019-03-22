@@ -19,7 +19,7 @@ const Nav = styled.nav`
   padding-top: 5rem;
 
   ${phone(css`
-    display: block;
+    padding: 3rem 1rem 0;
   `)}
 `
 
