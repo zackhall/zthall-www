@@ -17,12 +17,7 @@ import burpee from '../img/social/burpee.svg'
 import lodash from '../img/social/lodash.svg'
 import postImage from '../img/JS.png'
 
-const HeaderContainer = styled.div`
-  text-align: center;
-`
-
 const HeaderImage = styled.img`
-  margin: 5rem 0;
   max-width: 100%;
 `
 
@@ -54,7 +49,7 @@ const Small = styled.p`
 const Section = styled.section`
   margin: 7rem 0;
   ${phone(css`
-    margin: 1.5rem 0;
+    margin: 5rem 0;
   `)}
 `
 
@@ -68,18 +63,18 @@ export const IndexPageTemplate = ({
   posts,
 }) => (
   <>
-    <HeaderContainer>
-      <div>
-        <LeadH1>
-          {heading.split('*').map((val, i) => {
-            return i % 2 === 0 ? <>{val}</> : <em>{val}</em>
-          })}
-        </LeadH1>
-        <LeadParagraph>{subheading}</LeadParagraph>
-      </div>
-      <div>
-        <HeaderImage src={headerImage} alt="" />
-      </div>
+    <Section>
+      <LeadH1>
+        {heading.split('*').map((val, i) => {
+          return i % 2 === 0 ? <>{val}</> : <em>{val}</em>
+        })}
+      </LeadH1>
+      <LeadParagraph>{subheading}</LeadParagraph>
+    </Section>
+    <Section>
+      <HeaderImage src={headerImage} alt="" />
+    </Section>
+    <Section>
       <Centered>
         <Small>My work can be found on</Small>
       </Centered>
@@ -89,7 +84,7 @@ export const IndexPageTemplate = ({
         <Icon src={burpee} />
         <Icon src={lodash} />
       </Centered>
-    </HeaderContainer>
+    </Section>
     <Section>
       <LeadH2>Writing</LeadH2>
       <LeadParagraph>

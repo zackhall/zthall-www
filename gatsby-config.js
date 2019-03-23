@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Zack Hall',
+    title: 'Zack Hall – JavaScript Front-end Engineer',
     description:
       'I am Zack Hall – a freelance front-end developer based out of Boston, MA. I specialize in building and designing pixel-perfect, snappy, and user-friendly websites using React, Node.js, and modern JavaScript.',
   },
