@@ -19,16 +19,11 @@ import postImage from '../img/JS.png'
 
 const HeaderContainer = styled.div`
   text-align: center;
-  margin-top: 5rem;
 `
 
 const HeaderImage = styled.img`
   margin: 5rem 0;
   max-width: 100%;
-`
-
-const LightParagraph = styled.p`
-  opacity: 0.75;
 `
 
 const Icon = styled.img`
@@ -81,7 +76,6 @@ export const IndexPageTemplate = ({
           })}
         </LeadH1>
         <LeadParagraph>{subheading}</LeadParagraph>
-        {/* <LightParagraph>{description}</LightParagraph> */}
       </div>
       <div>
         <HeaderImage src={headerImage} alt="" />

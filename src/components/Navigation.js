@@ -16,10 +16,12 @@ const Nav = styled.nav`
   max-width: 960px;
   margin: 0 auto;
   position: relative;
-  padding-top: 5rem;
+  padding-top: 3rem;
+  margin-bottom: 8rem;
 
-  ${phone(`
+  ${mobile(`
     padding: 3rem 1rem 0;
+    margin-bottom: 3rem;
   `)}
 `
 
@@ -27,6 +29,13 @@ const LogoContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+`
+
+const DesktopOnlyLogoContainer = styled(LogoContainer)`
+  ${phone(`
+    display: none;
+    visibility: hidden;
+  `)}
 `
 
 const LogoImg = styled.img`
@@ -38,11 +47,11 @@ const MainNav = styled.div`
 `
 const Navigation = () => (
   <Nav role="navigation">
-    <LogoContainer>
+    <DesktopOnlyLogoContainer>
       <Link to="/" title="Logo">
         <LogoImg src={logoType} alt="Zack Hall" />
       </Link>
-    </LogoContainer>
+    </DesktopOnlyLogoContainer>
     <LogoContainer>
       <Link to="/" title="Logo">
         <LogoImg src={logo} alt="Zack Hall" />
