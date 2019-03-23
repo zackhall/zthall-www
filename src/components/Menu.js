@@ -77,7 +77,8 @@ const MenuButton = styled.button`
   cursor: pointer;
   position: relative;
   border-radius: 50%;
-  background: ${props => props.expanded ? 'var(--color-primary)' : 'var(--color-background)'};
+  background: ${props =>
+    props.expanded ? 'var(--color-primary)' : 'var(--color-background)'};
   transition: all 100ms ease-in-out;
   border: 2px solid transparent;
 
@@ -93,8 +94,9 @@ const MenuButton = styled.button`
     display: block;
     position: absolute;
     height: 2px;
-    width: calc(var(--toggler-width) * 1/2);
-    background: ${props => props.expanded ? 'var(--color-background)' : 'var(--color-primary)'};
+    width: calc(var(--toggler-width) * 1 / 2);
+    background: ${props =>
+      props.expanded ? 'var(--color-background)' : 'var(--color-primary)'};
     top: 50%;
     left: 50%;
     transition: all 100ms ease-in-out;
