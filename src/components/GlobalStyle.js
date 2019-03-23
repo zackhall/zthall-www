@@ -47,13 +47,13 @@ export default createGlobalStyle`
 
   h1, h2, h3, h4, h5, h6 {
     color: var(--color-neutral);
-    font-family: var(--font-family-heading);
     font-weight: 800;
     letter-spacing: -0.02em;
   }
 
   h1 {
     font-size: 72px;
+    font-family: var(--font-family-heading);
     line-height: 1.2;
     ${mobile(css`
       font-size: 56px;
@@ -65,6 +65,7 @@ export default createGlobalStyle`
 
   h2 {
     font-size: 58px;
+    font-family: var(--font-family-heading);
     line-height: 1;
     ${mobile(css`
       font-size: 52px;
