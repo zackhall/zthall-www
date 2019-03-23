@@ -3,40 +3,39 @@ import { Link } from 'gatsby'
 import styled, { css } from 'styled-components'
 import { phone, mobile } from '../utils/media'
 
-export const CardGallery = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1.5rem;
-  margin: 2rem 0;
-  ${mobile(css`
-    grid-template-columns: 1fr;
-  `)}
-`
+const CardContainer = styled.div``
 
-const CardContainer = styled.div`
-  border-radius: 10px;
-  padding: 1rem;
-  border: 1px solid var(--color-neutral-xlight);
-  transition: 0.25s;
-  &:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(0, 0, 0, 0);
-  }
-`
-const CardGraphicContainer = styled.div`
+const CardImage = styled.div`
   display: inline-block;
-  width: 28%;
-  overflow: hidden;
-  vertical-align: top;
-`
-
-const CardGraphic = styled.div`
+  height: 8rem;
+  width: 8rem;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  width: 100%;
-  padding-top: 100%;
-  border-radius: 10px;
+  position: relative;
+  margin-right: 2rem;
+
+  ${phone(`
+    height: 4rem;
+    width: 4rem;
+    margin-right: 1rem;
+
+    &::before {
+      transform: translateX(1rem) translateY(1rem) !important;
+    }
+  `)}
+
+  &::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--color-secondary);
+    z-index: -1;
+    transform: translateX(2rem) translateY(2rem);
+  }
 `
 
 const CardContent = styled.div`
@@ -45,15 +44,12 @@ const CardContent = styled.div`
   margin: 0 0 0 5%;
 `
 
-export const Card = ({ title, image, href }) => (
-  <Link to={href}>
-    <CardContainer>
-      <CardGraphicContainer>
-        <CardGraphic style={{ backgroundImage: `url(${image})` }} />
-      </CardGraphicContainer>
-      <CardContent>
-        <h4>{title}</h4>
-      </CardContent>
-    </CardContainer>
-  </Link>
+export const Card = ({ title, description, image, href }) => (
+  <CardContainer>
+    <Link to={href}><CardImage style={{ backgroundImage: `url(${image})` }} /></Link>
+    <CardContent>
+      <Link to={href}><h4>{title}</h4></Link>
+      <p>{description} <Link to={href}>Read more.</Link></p>
+    </CardContent>
+  </CardContainer>
 )

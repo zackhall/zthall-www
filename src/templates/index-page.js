@@ -7,7 +7,7 @@ import styled, { css } from 'styled-components'
 import Layout from '../components/Layout'
 import { mobile, phone } from '../utils/media'
 import { LeadH1, LeadH2, LeadParagraph } from '../components/Lead'
-import { Card, CardGallery } from '../components/Card'
+import { Card } from '../components/Card'
 
 // Assets
 import headerImage from '../img/zack-hall-zthall.png'
@@ -91,15 +91,14 @@ export const IndexPageTemplate = ({
         Useful tips, insights, and knowledge from my experience in building user
         experiences.
       </LeadParagraph>
-      <CardGallery>
-        {posts.map(post => (
-          <Card
-            title={post.node.frontmatter.title}
-            image={postImage}
-            href={post.node.fields.slug}
-          />
-        ))}
-      </CardGallery>
+      {posts.map(post => (
+        <Card
+          title={post.node.frontmatter.title}
+          description={post.node.frontmatter.description}
+          image={postImage}
+          href={post.node.fields.slug}
+        />
+      ))}
     </Section>
   </>
 )
@@ -169,6 +168,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+            description
           }
         }
       }

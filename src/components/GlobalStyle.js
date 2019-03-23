@@ -19,6 +19,7 @@ export default createGlobalStyle`
     --color-primary-light: rgba(11, 36, 251, 0.5);
     --color-primary-xlight: rgba(11, 36, 251, 0.25);
     --color-primary-xxlight: rgba(11, 36, 251, 0.15);
+    --color-secondary: rgba(245, 238, 218, 1.00);
     --color-background: rgba(255, 255, 255, 1.00);
     --color-neutral: rgba(28, 47, 89, 1.00);
     --color-neutral-light: rgba(200, 200, 200, 1.00);
@@ -83,6 +84,17 @@ export default createGlobalStyle`
     `)}
     ${phone(css`
       font-size: 26px;
+    `)}
+  }
+
+  h4 {
+    font-size: 28px;
+    line-height: 1.1;
+    ${mobile(css`
+      font-size: 24px;
+    `)}
+    ${phone(css`
+      font-size: 20px;
     `)}
   }
 
