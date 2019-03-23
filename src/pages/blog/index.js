@@ -3,7 +3,7 @@ import { graphql, Link } from 'gatsby'
 import styled, { css } from 'styled-components'
 
 import Layout from '../../components/Layout'
-import { Card, CardGallery } from '../../components/Card'
+import Card from '../../components/Card'
 import { phone, mobile } from '../../utils/media'
 
 import postImage from '../../img/JS.png'
@@ -23,7 +23,7 @@ export default class BlogIndexPage extends React.Component {
     return (
       <Layout>
         <h1>Blog Posts</h1>
-        <CardGallery>{Posts}</CardGallery>
+        {Posts}
       </Layout>
     )
   }

@@ -7,7 +7,7 @@ import styled, { css } from 'styled-components'
 import Layout from '../components/Layout'
 import { mobile, phone } from '../utils/media'
 import { LeadH1, LeadH2, LeadParagraph } from '../components/Lead'
-import { Card } from '../components/Card'
+import Card from '../components/Card'
 
 // Assets
 import headerImage from '../img/zack-hall-zthall.png'
