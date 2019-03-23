@@ -20,7 +20,7 @@ export default createGlobalStyle`
     --color-primary-xlight: rgba(11, 36, 251, 0.25);
     --color-primary-xxlight: rgba(11, 36, 251, 0.15);
     --color-background: rgba(255, 255, 255, 1.00);
-    --color-neutral: rgba(35, 35, 35, 1.00);
+    --color-neutral: rgba(28, 47, 89, 1.00);
     --color-neutral-light: rgba(200, 200, 200, 1.00);
     --color-neutral-xlight: rgba(240, 240, 240, 1.00);
 

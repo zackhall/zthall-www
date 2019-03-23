@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import styled, { css } from 'styled-components'
 
-// Components
+// Local
 import Layout from '../components/Layout'
 import { mobile, phone } from '../utils/media'
 import { LeadH1, LeadH2, LeadParagraph } from '../components/Lead'
@@ -33,8 +33,12 @@ const LightParagraph = styled.p`
 
 const Icon = styled.img`
   height: 2.5rem;
-  margin: 4rem;
   opacity: 0.75;
+  margin: 4rem;
+  ${phone(`
+    height: 2rem;
+    margin: 1.5rem;
+  `)}
 `
 
 const Centered = styled.div`

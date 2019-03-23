@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 import Menu from '../components/Menu'
 
@@ -18,7 +18,7 @@ const Nav = styled.nav`
   position: relative;
   padding-top: 5rem;
 
-  ${phone(css`
+  ${phone(`
     padding: 3rem 1rem 0;
   `)}
 `
@@ -27,9 +27,6 @@ const LogoContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  ${mobile(css`
-    padding-left: auto 1rem;
-  `)}
 `
 
 const LogoImg = styled.img`

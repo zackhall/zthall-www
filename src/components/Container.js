@@ -1,13 +1,13 @@
 import React from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { mobile } from '../utils/media'
 
 export default styled.div`
   max-width: 960px;
   margin: 0 auto;
   position: relative;
-  ${mobile(css`
+  ${mobile(`
     width: 100%;
-    padding: 2rem;
+    padding: 1rem;
   `)}
 `

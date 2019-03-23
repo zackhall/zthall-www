@@ -7,10 +7,10 @@ import transition from 'styled-transition-group'
 const Root = styled.div`
   --timeout: 400ms;
   --timeout-half: 200ms;
-  --toggler-height: 4rem;
-  --toggler-width: 4rem;
+  --toggler-height: 2rem;
+  --toggler-width: 2rem;
   --menu-starting-top: 0;
-  --menu-ending-top: 6rem;
+  --menu-ending-top: 4rem;
   --menu-max-height: 30rem;
   --menu-width: 16rem;
   --menu-shadow-x: 0;
@@ -72,7 +72,7 @@ const MenuButton = styled.button`
   top: 0;
   right: 0;
   z-index: 99;
-  padding: 2rem;
+  padding: calc(var(--toggler-height) / 2) calc(var(--toggler-width) / 2);
   background: var(--color-primary);
   border: none;
   cursor: pointer;
@@ -84,7 +84,7 @@ const MenuButton = styled.button`
     display: block;
     position: absolute;
     height: 2px;
-    width: 24px;
+    width: calc(var(--toggler-width) * 1/2);
     background: var(--color-background);
     top: 50%;
     left: 50%;
@@ -189,8 +189,8 @@ const MenuArrow = transition.div`
   position: absolute;
   z-index: 2;
   top: var(--menu-ending-top);
-  right: 2rem;
-  transform: translateY(-100%);
+  right: calc(var(--toggler-width) / 2);
+  transform: translateY(-100%) translateX(50%);
   width: 0;
   height: 0;
   border-left: 0.5rem solid transparent;
