@@ -47,7 +47,8 @@ const CardImage = styled.div`
   width: 100%;
   transition: all 200ms ease-in-out;
 
-  &:hover {
+  &:hover,
+  ${CardImageContainer}:hover & {
     transform: translate(-0.35rem, -0.35rem) scale(1.075);
     box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.25);
   }
