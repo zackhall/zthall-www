@@ -1,16 +1,25 @@
-import { createGlobalStyle, css, keyframes } from 'styled-components'
-import { mobile, phone } from '../utils/media'
+import { createGlobalStyle, css } from 'styled-components'
+import { desktop, mobile, phone } from '../utils/media'
 
-const backgroundKeyframes = keyframes`
-  0% {
-    background-position: 0% 50%
-  }
-  50% {
-    background-position: 100% 50%
-  }
-  100% {
-    background-position: 0% 50%
-  }
+const baseFont = {
+  phone: 16,
+  mobile: 18,
+  desktop: 18,
+}
+
+// Inspiration: https://medium.com/sketch-app-sources/exploring-responsive-type-scales-cf1da541be54
+const fontScale = 1.25
+
+const heading = headingLevel => css`
+  ${desktop(
+    `font-size: ${baseFont.desktop * Math.pow(fontScale, 7 - headingLevel)}px;`
+  )}
+  ${mobile(
+    `font-size: ${baseFont.mobile * Math.pow(fontScale, 7 - headingLevel)}px;`
+  )}
+  ${phone(
+    `font-size: ${baseFont.phone * Math.pow(fontScale, 7 - headingLevel)}px;`
+  )}
 `
 
 export default createGlobalStyle`
@@ -26,7 +35,7 @@ export default createGlobalStyle`
     --color-neutral-xlight: rgba(240, 240, 240, 1.00);
 
     --font-family-primary: proxima-nova, -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    --font-family-heading: warnock-pro, serif;
+    --font-family-display: warnock-pro, serif;
   }
 
   * {
@@ -39,7 +48,13 @@ export default createGlobalStyle`
     font-weight: 300;
     letter-spacing: 0.01em;
     line-height: 1.7
-    font-size: 18px;
+    font-size: ${baseFont.desktop}px;
+    ${mobile(`
+      font-size: ${baseFont.mobile}px;
+    `)}
+    ${phone(`
+      font-size: ${baseFont.phone}px;
+    `)}
   }
 
   ::selection {
@@ -51,61 +66,39 @@ export default createGlobalStyle`
     color: var(--color-neutral);
     font-weight: 800;
     letter-spacing: -0.02em;
+    margin-block-start: 1.5em;
+    margin-block-end: 0.5em;
   }
 
   h1 {
-    font-size: 72px;
-    font-family: var(--font-family-heading);
+    font-family: var(--font-family-display);
     line-height: 1.2;
-    ${mobile(css`
-      font-size: 56px;
-    `)}
-    ${phone(css`
-      font-size: 48px;
-    `)}
+    ${heading(1)};
   }
 
   h2 {
-    font-size: 58px;
-    font-family: var(--font-family-heading);
-    line-height: 1;
-    ${mobile(css`
-      font-size: 52px;
-    `)}
-    ${phone(css`
-      font-size: 36px;
-    `)}
+    line-height: 1.1;
+    ${heading(2)};
   }
 
   h3 {
-    font-size: 44px;
     line-height: 1.1;
-    ${mobile(css`
-      font-size: 36px;
-    `)}
-    ${phone(css`
-      font-size: 26px;
-    `)}
+    ${heading(3)};
   }
 
   h4 {
-    font-size: 28px;
     line-height: 1.1;
-    ${mobile(css`
-      font-size: 24px;
-    `)}
-    ${phone(css`
-      font-size: 20px;
-    `)}
+    ${heading(4)};
   }
 
-  em {
-    color: var(--color-background);
-    background: linear-gradient(-45deg, #342FD4, #2DB3C7, #2EC2A8);
-    padding: 0.5rem;
-    border-radius: 5px;
-    background-size: 400% 400%;
-    animation: ${backgroundKeyframes} 15s ease infinite;
+  h5 {
+    line-height: 1.1;
+    ${heading(5)};
+  }
+
+  h6 {
+    line-height: 1.1;
+    ${heading(6)};
   }
 
   pre {
