@@ -39,6 +39,7 @@ export default createGlobalStyle`
     font-weight: 300;
     letter-spacing: 0.01em;
     line-height: 1.7
+    font-size: 18px;
   }
 
   ::selection {
