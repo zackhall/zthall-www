@@ -32,18 +32,18 @@ const Footer = class extends React.Component {
     return (
       <FooterContainer>
         <div>
-          <a title="dribbble" href="https://facebook.com">
+          <Link title="dribbble" href="https://facebook.com">
             <SocialIcon src={dribbble} alt="Dribbble" />
-          </a>
-          <a title="twitter" href="https://twitter.com">
+          </Link>
+          <Link title="twitter" href="https://twitter.com">
             <SocialIcon src={twitter} alt="Twitter" />
-          </a>
-          <a title="instagram" href="https://instagram.com">
+          </Link>
+          <Link title="instagram" href="https://instagram.com">
             <SocialIcon src={instagram} alt="Instagram" />
-          </a>
-          <a title="github" href="https://vimeo.com">
+          </Link>
+          <Link title="github" href="https://vimeo.com">
             <SocialIcon src={github} alt="Github" />
-          </a>
+          </Link>
         </div>
         <div>
           <small>Copyright © 2019 Zack Hall</small>

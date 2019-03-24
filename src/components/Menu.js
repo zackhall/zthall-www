@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-import ReactDOM from 'react-dom'
 import { Link } from 'gatsby'
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 import transition from 'styled-transition-group'
 
 const Root = styled.div`

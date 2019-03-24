@@ -1,12 +1,10 @@
-import React from 'react'
 import styled, { css } from 'styled-components'
-
 import { mobile, phone } from '../utils/media'
 
 const base = css`
   text-align: center;
   max-width: 750px;
-  ${mobile(css`
+  ${mobile(`
     max-width: 100%;
   `)}
 `
@@ -27,7 +25,7 @@ export const LeadParagraph = styled.p`
   font-size: 26px;
   font-weight: 200;
   margin: 1rem auto 2rem;
-  ${phone(css`
+  ${phone(`
     font-size: 20px;
   `)}
 `

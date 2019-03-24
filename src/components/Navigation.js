@@ -42,9 +42,6 @@ const LogoImg = styled.img`
   height: 2rem;
 `
 
-const MainNav = styled.div`
-  display: flex;
-`
 const Navigation = () => (
   <Nav role="navigation">
     <DesktopOnlyLogoContainer>

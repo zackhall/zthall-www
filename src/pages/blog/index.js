@@ -1,10 +1,6 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
-import styled, { css } from 'styled-components'
-
 import Layout from '../../components/Layout'
 import Card from '../../components/Card'
-import { phone, mobile } from '../../utils/media'
 
 import postImage from '../../img/JS.png'
 

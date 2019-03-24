@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import styled, { css } from 'styled-components'
 
 // Local
 import Layout from '../components/Layout'
-import { mobile, phone } from '../utils/media'
+import { phone } from '../utils/media'
 import { LeadH1, LeadH2, LeadParagraph } from '../components/Lead'
 import Card from '../components/Card'
 

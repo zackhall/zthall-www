@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import styled, { css } from 'styled-components'
-import { phone, mobile } from '../utils/media'
+import styled from 'styled-components'
+import { phone } from '../utils/media'
 
 const CardImageContainer = styled.div`
   display: inline-block;
