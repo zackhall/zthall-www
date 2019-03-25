@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Link } from 'gatsby'
 import styled, { css } from 'styled-components'
 
 import ButtonLink from '../components/ButtonLink'
@@ -52,10 +51,11 @@ const SocialIcon = styled.img`
   height: 1em;
   opacity: 0.5;
   margin: 1rem;
+  filter: invert(1);
   &:hover {
     cursor: pointer;
     opacity: 1;
-    filter: invert(0.3) sepia(1) saturate(60) hue-rotate(200deg);
+    filter: invert(0.7);
   }
 `
 const Footer = () => {
@@ -72,18 +72,18 @@ const Footer = () => {
         </LightH1>
         <SubFooter>
           <div>
-            <Link title="dribbble" href="https://dribbble.com/zthall">
+            <a title="dribbble" href="https://dribbble.com/zthall">
               <SocialIcon src={dribbble} alt="Dribbble" />
-            </Link>
-            <Link title="twitter" href="https://twitter.com/zthall">
+            </a>
+            <a title="twitter" href="https://twitter.com/zthall">
               <SocialIcon src={twitter} alt="Twitter" />
-            </Link>
-            <Link title="instagram" href="https://instagram.com/zthall">
+            </a>
+            <a title="instagram" href="https://instagram.com/zthall">
               <SocialIcon src={instagram} alt="Instagram" />
-            </Link>
-            <Link title="github" href="https://github.com/zackhall">
+            </a>
+            <a title="github" href="https://github.com/zackhall">
               <SocialIcon src={github} alt="Github" />
-            </Link>
+            </a>
           </div>
           <div>
             <LightSmall>Copyright © 2019 Zack Hall</LightSmall>
