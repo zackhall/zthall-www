@@ -8,17 +8,24 @@ const baseFont = {
 }
 
 // Inspiration: https://medium.com/sketch-app-sources/exploring-responsive-type-scales-cf1da541be54
-const fontScale = 1.25
+const fontScale = {
+  phone: 1.15,
+  mobile: 1.25,
+  desktop: 1.25,
+}
 
 const heading = headingLevel => css`
   ${desktop(
-    `font-size: ${baseFont.desktop * Math.pow(fontScale, 7 - headingLevel)}px;`
+    `font-size: ${baseFont.desktop *
+      Math.pow(fontScale.desktop, 7 - headingLevel)}px;`
   )}
   ${mobile(
-    `font-size: ${baseFont.mobile * Math.pow(fontScale, 7 - headingLevel)}px;`
+    `font-size: ${baseFont.mobile *
+      Math.pow(fontScale.mobile, 7 - headingLevel)}px;`
   )}
   ${phone(
-    `font-size: ${baseFont.phone * Math.pow(fontScale, 7 - headingLevel)}px;`
+    `font-size: ${baseFont.phone *
+      Math.pow(fontScale.phone, 7 - headingLevel)}px;`
   )}
 `
 
@@ -33,6 +40,7 @@ export default createGlobalStyle`
     --color-neutral: rgba(28, 47, 89, 1.00);
     --color-neutral-light: rgba(200, 200, 200, 1.00);
     --color-neutral-xlight: rgba(240, 240, 240, 1.00);
+    --color-neutral-xxlight: rgba(250, 250, 250, 1.00);
 
     --font-family-primary: proxima-nova, -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     --font-family-display: warnock-pro, serif;
@@ -114,13 +122,12 @@ export default createGlobalStyle`
   }
 
   input,
-  textarea {
+  textarea,
+  button {
     font-size: 100%;
     outline: 0;
-    padding: .5rem 2.5rem .5rem 1rem;
-    border: 1px solid currentColor;
+    padding: .5rem;
     border-radius: .25rem!important;
-    background-color: transparent;
     border: 1px solid var(--color-neutral-light);
     background-color: var(--color-background);
     &:focus {
@@ -129,9 +136,17 @@ export default createGlobalStyle`
     }
   }
 
+  button {
+    padding: .5rem 1rem;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
   textarea {
     height: 8rem;
     resize: none;
+    padding: .5rem 2.5rem .5rem 1rem;
     &:focus {
       border-color: var(--color-primary);
       box-shadow: inset 0 1px 2px var(--color-neutral-light), 0 0 0 0.2em var(--color-neutral-xlight);
