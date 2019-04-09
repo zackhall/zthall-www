@@ -1,8 +1,6 @@
 ---
 templateKey: blog-post
-title: >-
-  2 Amazing Conference Talks You Should Watch if You Want to Understand the
-  JavaScript Event Loop
+title: 2 Conference Talks You Must Watch to Understand the JavaScript Event Loop
 date: 2019-04-03T14:14:39.081Z
 description: >-
   How does a single threaded language like JavaScript handle asynchronous
