@@ -1,22 +1,11 @@
 ---
-templateKey: 'about-page'
-path: /about
-title: About our values
+templateKey: about-page
+title: Hello 👋
 ---
-# 1. Shade-grown coffee
-Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
+![Zack Hall](https://raw.githubusercontent.com/zackhall/zthall-www/master/static/img/og-image.png "Zack Hall")
 
-## 2. Single origin
-Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available.
+I'm a front-end engineer that builds modern interfaces with JavaScript. I grew up in Canton, OH. After high school, I went to _The_ Ohio State University (yes, we really do emphasize "[The](https://www.quora.com/Is-The-Ohio-State-University-called-THE-Ohio-State-University-outside-of-an-athletic-context)") and graduated with a bachelors in Computer Science Engineering.
 
-### 3. Sustainable farming
-Sustainable agriculture is farming in sustainable ways based on an understanding of ecosystem services, the study of relationships between organisms and their environment. What grows where and how it is grown are a matter of choice and careful consideration for nature and communities.
+I've written code for [Alexa](https://www.amazon.com/Amazon-Echo-And-Alexa-Devices/b?ie=UTF8&node=9818047011), [Amazon.com](https://www.amazon.com/), [Lodash.com](https://lodash.com/), [Windows.com](https://www.microsoft.com/en-us/windows), the [Windows Store](https://www.microsoft.com/en-us/store/apps), [Microsoft Edge](https://www.microsoft.com/en-us/windows/microsoft-edge), and a slew of personal projects. I'm currently working on helping Alexa learn automatically from customer feedback.
 
-#### 4. Direct sourcing
-Direct trade is a form of sourcing practiced by some coffee roasters. Advocates of direct trade practices promote direct communication and price negotiation between buyer and farmer, along with systems that encourage and incentivize quality.
-
-##### 5. Reinvest profits
-We want to truly empower the communities that bring amazing coffee to you. That’s why we reinvest 20% of our profits into farms, local businesses and schools everywhere our coffee is grown. You can see the communities grow and learn more about coffee farming on our blog.
-
-###### 6. Reinvest profits
-We want to truly empower the communities that bring amazing coffee to you. That’s why we reinvest 20% of our profits into farms, local businesses and schools everywhere our coffee is grown. You can see the communities grow and learn more about coffee farming on our blog.
+I write about web development on the [blog](/blog) here and on [twitter](https://twitter.com/ZTHall).

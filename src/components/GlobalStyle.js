@@ -65,6 +65,10 @@ export default createGlobalStyle`
     `)}
   }
 
+  img {
+    max-width: 100%;
+  }
+
   ::selection {
     background: var(--color-primary);
     color: var(--color-background);
