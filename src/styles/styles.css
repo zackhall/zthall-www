@@ -1,0 +1,68 @@
+@tailwind base;
+
+.hover\:z-underline {
+  padding-bottom: 1px;
+
+  &:hover {
+    @apply border-b;
+    @apply border-dashed;
+    @apply border-green-300;
+    @apply pb-0;
+  }
+}
+
+p a,
+.z-underline {
+  @apply border-b;
+  @apply border-dashed;
+  @apply border-green-300;
+  @apply pb-0;
+}
+
+ul {
+  @apply list-disc;
+}
+
+small {
+  @apply font-display;
+  @apply text-sm;
+}
+
+blockquote {
+  @apply font-light;
+  @apply italic;
+  @apply border-l-4;
+  @apply mx-0;
+  @apply px-6;
+}
+
+.body-dark {
+  @apply bg-green-900;
+  @apply text-white;
+}
+
+.section-heading {
+  @apply block;
+  @apply mt-4;
+  @apply pb-4;
+  @apply border-t;
+  @apply border-gray-100;
+}
+
+.gatsby-highlight {
+  @apply mb-6;
+}
+
+.block\! {
+  display: block !important;
+}
+
+.z-border-b-dashed {
+  @apply border-b;
+  @apply border-gray-500;
+  @apply border-dashed;
+}
+
+@tailwind components;
+
+@tailwind utilities;
