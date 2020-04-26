@@ -137,7 +137,7 @@ const ContactPage = ({ data, location }) => {
                 href="https://www.linkedin.com/in/hallzack/"
                 className="z-underline"
               >
-                @hallzack
+                /in/hallzack
               </a>
             </small>
           </p>
