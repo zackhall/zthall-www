@@ -5,7 +5,6 @@ import Image from 'gatsby-image';
 import Layout from '../components/layout';
 import SectionHeading from '../components/sectionHeading';
 import SEO from '../components/seo';
-import experience from '../data/experience';
 
 const Homepage = ({ data, location }) => {
   let posts = data.allMarkdownRemark.edges;
@@ -56,28 +55,30 @@ const Homepage = ({ data, location }) => {
       </div>
     ));
 
-  const resume = experience.map(item => (
-    <>
-      <div className="lg:col-span-1">
-        <h2 className="font-body mb-2">{item.company}</h2>
-        <div>
-          <span className="text-green-300 text-sm font-display my-2">
-            {item.title} • {item.location} • {item.time}
-          </span>
-        </div>
-      </div>
-      <div className="lg:col-span-2">
-        <p className="text-sm">{item.description}</p>
-      </div>
-    </>
-  ));
-
   return (
     <Layout location={location} header={header} dark="true">
       <SEO title="Home" />
       <SectionHeading>Experience</SectionHeading>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 row-gap-8 mb-24">
-        {resume}
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 row-gap-8 mb-24">
+          <img
+            className="max-w-full max-h-16 mb-6 grayscale"
+            src={data.amazon.publicURL}
+          />
+          <img
+            className="max-w-full mb-6 grayscale"
+            src={data.microsoft.publicURL}
+          />
+          <img
+            className="max-w-full mb-6 grayscale"
+            src={data.smartsheet.publicURL}
+          />
+          <a href="https://sketchupforwoodworkers.com">
+            <img
+              aria-label="SketchUp Tutorials For Woodworkers"
+              className="max-w-full mb-6 grayscale"
+              src={data.sfw.publicURL}
+            />
+          </a>
       </div>
       <SectionHeading to="/notes">Notes</SectionHeading>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mb-24">
@@ -102,6 +103,18 @@ export const pageQuery = graphql`
           ...GatsbyImageSharpFixed
         }
       }
+    }
+    amazon: file(absolutePath: { regex: "/amazon.svg/" }) {
+      publicURL
+    }
+    microsoft: file(absolutePath: { regex: "/microsoft.svg/" }) {
+      publicURL
+    }
+    smartsheet: file(absolutePath: { regex: "/smartsheet.svg/" }) {
+      publicURL
+    }
+    sfw: file(absolutePath: { regex: "/sketchup-for-woodworkers.svg/" }) {
+      publicURL
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
