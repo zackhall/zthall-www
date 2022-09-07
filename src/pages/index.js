@@ -18,7 +18,7 @@ const Homepage = ({ data, location }) => {
           </span>
           <h1 className="text-xxl">Front-end developer in Boston, MA.</h1>
           <p>
-            Currently, engineer at AWS. Formerly Alexa, Amazon.com, Edge
+            Currently, engineer at Smartsheet. Formerly AWS, Alexa, Amazon.com, Edge
             browser, and Windows.
           </p>
         </div>
