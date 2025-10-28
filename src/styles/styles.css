@@ -53,7 +53,18 @@ blockquote {
   @apply mt-4;
   @apply pb-4;
   @apply border-t;
-  @apply border-gray-100;
+  @apply border-yellow-100;
+}
+
+.section-heading h2 {
+  @apply inline-block;
+  @apply bg-green-900;
+  @apply pr-4;
+  transform: translateY(-1rem);
+}
+
+.section-heading h2::before {
+  content: '// ';
 }
 
 .gatsby-highlight {
