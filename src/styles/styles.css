@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap');
+
 @tailwind base;
 
 .grayscale {
   filter: grayscale(100%) brightness(15);
-  opacity: 0.8
+  opacity: 0.8;
 }
 
 .hover\:z-underline {
