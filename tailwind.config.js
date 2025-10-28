@@ -9,14 +9,24 @@ const typographyTheme = typography({
 
 module.exports = {
   content: [
-    './**/*.njk',
-    './**/*.md',
+    './index.njk',
+    './404.njk',
+    './notes.njk',
+    './contact.njk',
     './src/_includes/**/*.njk',
-    './content/**/*.md',
+    './content/blog/**/*.md',
   ],
   theme: {
     container: {
       center: true,
+      padding: '1rem',
+      screens: {
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1024px',
+        xxl: '1280px',
+      },
     },
     fontFamily: {
       display: ['Space Mono', 'sans-serif'],
@@ -40,9 +50,6 @@ module.exports = {
         tightest: '-.15em',
       },
     },
-  },
-  variants: {
-    borderWidth: ['responsive', 'hover', 'focus'],
   },
   plugins: [typographyTheme],
 };

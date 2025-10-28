@@ -4,11 +4,6 @@
 
 @tailwind base;
 
-.grayscale {
-  filter: grayscale(100%) brightness(15);
-  opacity: 0.8;
-}
-
 .hover\:z-underline {
   padding-bottom: 1px;
 
@@ -86,3 +81,10 @@ blockquote {
 @tailwind components;
 
 @tailwind utilities;
+
+@layer utilities {
+  .grayscale {
+    filter: grayscale(100%) brightness(15);
+    opacity: 0.8;
+  }
+}
