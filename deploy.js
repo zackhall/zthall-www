@@ -1,8 +1,8 @@
 const fs = require('fs');
 const ghpages = require('gh-pages');
 
-fs.writeFile('public/CNAME', 'zthall.com', function (err) {});
-ghpages.publish('public', err => {
+fs.writeFile('_site/CNAME', 'zthall.com', function (err) {});
+ghpages.publish('_site', err => {
   if (err) {
     console.error(err);
   } else {
