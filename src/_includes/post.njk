@@ -1,0 +1,39 @@
+---
+layout: base.njk
+---
+
+{% set previous = collections.blog | getPreviousCollectionItem(page) %}
+{% set next = collections.blog | getNextCollectionItem(page) %}
+
+<article>
+  <header class="border-b border-dashed border-gray-500">
+    <h1>{{ title }}</h1>
+    <p class="text-lg">{{ description }}</p>
+    <p>
+      <small>{{ page.date | readableDate }}</small>
+    </p>
+  </header>
+  <section class="max-w-2xl py-8">
+    {{ content | safe }}
+  </section>
+</article>
+
+<hr />
+<nav>
+  <ul style="display: flex; flex-wrap: wrap; justify-content: space-between; list-style: none; padding: 0;">
+    <li>
+      {% if previous %}
+      <a href="{{ previous.url }}" rel="prev">
+        ← {{ previous.data.title }}
+      </a>
+      {% endif %}
+    </li>
+    <li>
+      {% if next %}
+      <a href="{{ next.url }}" rel="next">
+        {{ next.data.title }} →
+      </a>
+      {% endif %}
+    </li>
+  </ul>
+</nav>

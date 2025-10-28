@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title or metadata.site.title }}</title>
+    <meta name="description" content="{{ description or metadata.site.description }}">
+    
+    {# Open Graph / Facebook #}
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ metadata.site.url }}{{ page.url }}">
+    <meta property="og:title" content="{{ title or metadata.site.title }}">
+    <meta property="og:description" content="{{ description or metadata.site.description }}">
+    
+    {# Twitter #}
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:url" content="{{ metadata.site.url }}{{ page.url }}">
+    <meta property="twitter:title" content="{{ title or metadata.site.title }}">
+    <meta property="twitter:description" content="{{ description or metadata.site.description }}">
+    <meta property="twitter:creator" content="{{ metadata.site.twitter }}">
+    
+    <link rel="stylesheet" href="/src/styles/styles.css">
+    <link rel="icon" href="/content/assets/favicon.png">
+  </head>
+  <body class="min-h-screen relative {{ 'body-dark' if dark else '' }}">
+    {% include "navigation.njk" %}
+    
+    {% if hasHeader %}
+      {{ content | safe }}
+    {% else %}
+      <main class="container px-4 pt-10 pb-24">
+        {{ content | safe }}
+      </main>
+    {% endif %}
+    
+    <footer class="absolute bottom-0 left-0 right-0 bg-green-800 text-green-200">
+      <div class="container p-4">
+        © {{ page.date.getFullYear() or "2025" }} Zack Hall, Proudly built in Melrose, MA.
+      </div>
+    </footer>
+  </body>
+</html>

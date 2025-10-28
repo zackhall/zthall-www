@@ -1,0 +1,54 @@
+---
+layout: home.njk
+title: Zack Hall
+description: Front-end developer in Boston, MA.
+dark: true
+---
+
+<h2 class="text-xxl text-green-200 font-display mb-8">Experience</h2>
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-12 row-gap-8 mb-24">
+  <img
+    class="max-w-full max-h-16 mb-6 grayscale"
+    src="{{ metadata.companies.amazon }}"
+    alt="Amazon"
+  />
+  <img
+    class="max-w-full mb-6 grayscale"
+    src="{{ metadata.companies.microsoft }}"
+    alt="Microsoft"
+  />
+  <img
+    class="max-w-full mb-6 grayscale"
+    src="{{ metadata.companies.smartsheet }}"
+    alt="Smartsheet"
+  />
+  <a href="https://sketchupforwoodworkers.com">
+    <img
+      aria-label="SketchUp Tutorials For Woodworkers"
+      class="max-w-full mb-6 grayscale"
+      src="{{ metadata.companies.sketchupForWoodworkers }}"
+      alt="SketchUp for Woodworkers"
+    />
+  </a>
+</div>
+
+<div class="flex justify-between items-center mb-8">
+  <h2 class="text-xxl text-green-200 font-display">Notes</h2>
+  <a href="/notes/" class="text-green-200 hover:z-underline">View all →</a>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mb-24">
+  {%- for post in collections.blog | head(6) -%}
+  <div>
+    <h4 class="font-body font-normal h-10 mb-2">
+      <a class="hover:text-green-200 hover:z-underline" href="{{ post.url }}">
+        {{ post.data.title }}
+      </a>
+    </h4>
+    <p class="text-green-300 text-sm font-display my-2">
+      {{ post.date | readableDate }}
+    </p>
+    <p class="text-green-300 text-sm">{{ post.data.description }}</p>
+  </div>
+  {%- endfor -%}
+</div>

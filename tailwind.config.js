@@ -8,6 +8,12 @@ const typographyTheme = typography({
 });
 
 module.exports = {
+  content: [
+    './**/*.njk',
+    './**/*.md',
+    './src/_includes/**/*.njk',
+    './content/**/*.md',
+  ],
   theme: {
     container: {
       center: true,
