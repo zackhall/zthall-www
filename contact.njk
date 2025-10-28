@@ -99,7 +99,18 @@ permalink: /contact/
     <h3 class="block font-bold text-base">Contact info</h3>
     <p>
       Email:<br />
-      <a href="mailto:zack@zthall.com" class="z-underline">zack@zthall.com</a>
+      <div class="inline-flex">
+        <span class="bg-white border border-gray-400 text-gray-800 text-sm font-display py-2 px-4 rounded-l-sm">
+          zack@zthall.com
+        </span>
+        <button 
+          id="copyEmailBtn"
+          class="bg-gray-300 hover:bg-gray-400 border border-gray-400 border-l-0 text-gray-800 text-sm py-2 px-4 rounded-r-sm w-24"
+          onclick="copyEmail()"
+        >
+          <span id="copyIcon">📋</span>&nbsp;<span id="copyText">Copy</span>
+        </button>
+      </div>
     </p>
     <p>
       <span>Twitter:</span>&nbsp;
@@ -130,3 +141,26 @@ permalink: /contact/
     </p>
   </div>
 </div>
+
+<script>
+function copyEmail() {
+  const email = 'zack@zthall.com';
+  const copyIcon = document.getElementById('copyIcon');
+  const copyText = document.getElementById('copyText');
+  
+  // Copy to clipboard
+  navigator.clipboard.writeText(email).then(function() {
+    // Update button to show success
+    copyIcon.textContent = '✓';
+    copyText.textContent = 'Copied';
+    
+    // Reset after 10 seconds
+    setTimeout(function() {
+      copyIcon.textContent = '📋';
+      copyText.textContent = 'Copy';
+    }, 10000);
+  }).catch(function(err) {
+    console.error('Failed to copy:', err);
+  });
+}
+</script>
