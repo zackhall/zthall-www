@@ -1,99 +1,106 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's blog starter
-</h1>
+# Zack Hall - Personal Website
 
-Kick off your project with this blog boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+Front-end developer portfolio and blog, built with [Eleventy](https://www.11ty.dev/) and [Tailwind CSS](https://tailwindcss.com/).
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+## 🚀 Quick Start
 
-## 🚀 Quick start
+### Prerequisites
 
-1.  **Create a Gatsby site.**
+- Node.js (v14 or higher)
+- npm
 
-    Use the Gatsby CLI to create a new site, specifying the blog starter.
+### Installation
 
-    ```shell
-    # create a new Gatsby site using the blog starter
-    gatsby new my-blog-starter https://github.com/gatsbyjs/gatsby-starter-blog
-    ```
+```bash
+npm install
+```
 
-1.  **Start developing.**
+### Development
 
-    Navigate into your new site’s directory and start it up.
+Start the development server with live reload:
 
-    ```shell
-    cd my-blog-starter/
-    gatsby develop
-    ```
+```bash
+npm run dev
+```
 
-1.  **Open the source code and start editing!**
+This runs both Eleventy dev server and PostCSS watcher in parallel.
 
-    Your site is now running at `http://localhost:8000`!
+Visit `http://localhost:8080` to view the site.
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+### Build
 
-    Open the `my-blog-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+Build the production site:
 
-## 🧐 What's inside?
+```bash
+npm run build
+```
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+The built site will be in the `_site` directory.
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+### Other Commands
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+- `npm run clean` - Remove the `_site` directory
+- `npm run format` - Format code with Prettier
+- `npm run deploy` - Build and deploy the site
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+## 📁 Project Structure
 
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+```
+.
+├── content/
+│   ├── assets/          # Images and static assets
+│   └── blog/            # Blog posts in Markdown
+├── src/
+│   ├── _includes/       # Nunjucks templates and layouts
+│   ├── _data/           # Global data files
+│   └── styles/          # CSS files
+├── .eleventy.js         # Eleventy configuration
+├── tailwind.config.js   # Tailwind CSS configuration
+├── postcss.config.js    # PostCSS configuration
+├── index.njk            # Homepage
+├── notes.njk            # Blog listing page
+├── contact.njk          # Contact/About page
+└── 404.njk              # 404 error page
+```
 
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
+## 🎨 Features
 
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+- Static site generation with Eleventy
+- Tailwind CSS for styling
+- Syntax highlighting for code blocks
+- Markdown blog posts with frontmatter
+- SEO optimized with meta tags
+- RSS feed support
+- Responsive design
 
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
+## 📝 Writing Blog Posts
 
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+Create a new Markdown file in `content/blog/` with the following frontmatter:
 
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+```markdown
+---
+title: Your Post Title
+date: 2025-01-01
+description: A brief description of your post
+---
 
-9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
+Your content here...
+```
 
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+## 🛠️ Technology Stack
 
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+- **Static Site Generator:** Eleventy
+- **Templating:** Nunjucks
+- **Styling:** Tailwind CSS, PostCSS
+- **Content:** Markdown
+- **Syntax Highlighting:** Prism.js (via @11ty/eleventy-plugin-syntaxhighlight)
 
-12. **`README.md`**: A text file containing useful reference information about your project.
+## 📄 License
 
-## 🎓 Learning Gatsby
+See LICENSE file for details.
 
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
+## 🔗 Links
 
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-blog)
-
-[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/import/project?template=https://github.com/gatsbyjs/gatsby-starter-blog)
-
-<!-- AUTO-GENERATED-CONTENT:END -->
+- Website: [zthall.com](https://zthall.com)
+- Twitter: [@zthall](https://twitter.com/zthall)
+- GitHub: [@zackhall](https://github.com/zackhall)
