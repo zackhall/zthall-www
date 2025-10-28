@@ -8,6 +8,16 @@ MIGRATION.md
 package.json
 package-lock.json
 deploy.js
+LICENSE
+.github
+.git
+.gitignore
+README.md
+ELEVENTY_README.md
+MIGRATION.md
+package.json
+package-lock.json
+deploy.js
 gatsby-browser.js
 gatsby-config.js
 gatsby-node.js
