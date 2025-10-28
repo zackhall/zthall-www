@@ -14,6 +14,13 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('static');
   eleventyConfig.addPassthroughCopy('src/styles');
 
+  // Copy blog post images
+  eleventyConfig.addPassthroughCopy('content/blog/**/images');
+  eleventyConfig.addPassthroughCopy('content/blog/**/*.png');
+  eleventyConfig.addPassthroughCopy('content/blog/**/*.jpg');
+  eleventyConfig.addPassthroughCopy('content/blog/**/*.jpeg');
+  eleventyConfig.addPassthroughCopy('content/blog/**/*.gif');
+
   // Date filters
   eleventyConfig.addFilter('readableDate', dateObj => {
     return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat(
