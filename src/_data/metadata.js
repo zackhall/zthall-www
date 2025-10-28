@@ -11,5 +11,6 @@ module.exports = {
     microsoft: '/content/assets/microsoft.svg',
     smartsheet: '/content/assets/smartsheet.svg',
     sketchupForWoodworkers: '/content/assets/sketchup-for-woodworkers.svg',
+    dailyQuartiles: '/content/assets/daily-quartiles.svg',
   },
 };
